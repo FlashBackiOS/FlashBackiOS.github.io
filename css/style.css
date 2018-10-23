@@ -1062,3 +1062,9 @@ panel>block>p
   text-align: center !important;
 
 }
+ul{
+	margin-left: 0px;
+}
+ul > ul{
+	margin-left: 10px;
+}
