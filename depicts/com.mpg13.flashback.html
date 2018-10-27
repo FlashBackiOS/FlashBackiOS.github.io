@@ -24,11 +24,12 @@
 	<div>
 	<p>FlashBack is a script for easily switching between setups!</p>
 	<p>To use, simply run "FlashBack" as root over SSH or terminal.</p>
-	<hr><p><strong>Option 1:</strong> Backup current setup - this saves your wallpaper, icon layout, and tweak preferences (including themes and widgets)</p>
+	<hr><p><strong>Option 1:</strong> Backup current setup - this saves your wallpaper, icon layout, and tweak preferences (including selected themes and widgets)</p>
 	<p><strong>Option 2:</strong> Restore past setup - this also backs up your current setup in case you need to revert</p>
 	<p><strong>Option 3:</strong> Delete existing backups - type the name of the backup you wish to delete (this cannot be undone)</p>
 	<p><strong>Option 4:</strong> Delete AutoBackups - this deletes ALL AutoBackups</p>
 	<p><strong>Option 5:</strong> Package backup as DEB - this creates an installable DEB file for easily sharing your setups. With it, you can include required tweaks.</p>
+	<p><strong>Option 6:</strong> Update setups - If a setup is marked as not compatible with your version of FlashBack, and you feel safe using that setup anyway, then you can use this to mark it as compatible.</p>
 	</div>
 	</fieldset>
 		<br>
@@ -42,11 +43,12 @@
 	<p><strong>A:</strong> As of right now, FlashBack doesn't support system wallpapers. Why? I don't know. Otherwise, it would.</p>
 	<hr><p><strong>Q:</strong> Where are my backups stored in my filesystem?.</p>
 	<p><strong>A:</strong> You can find them in /Library/FlashBack/Backups/</p>
+	<hr><p><strong>Q:</strong> Where are my DEB backups stored in my filesystem?.</p>
+	<p><strong>A:</strong> You can find them in /User/Documents/FlashBack/</p>
 	<hr><p><strong>Q:</strong> How do I share my setups with others?</p>
 	<p><strong>A:</strong> The best way to do this is to create a backup using option 1, then back it up to a DEB using option 5. Automatic mode is recomended for sharing setups. The best ways to share the DEB are my hosting your own YouRepo, or requesting that it be hosted on mine! Email me for more information.</p>
 	<hr><p><strong>Q:</strong> Ah! My device is heating up and it's battery is draining! Why would you release this virus???</p>
-	<p><strong>A:</strong> Chill. If your device starts heating up, open a terminal, start FlashBack, then use the 6th option to properly kill it. Don't leave FlashBack running in the background. If this doesn't solve it, reboot and rejailbreak (LDRestart might work as well, depending on what it unloads). Just be sure to properly kill it in the future. I'mm currently looking into how to kill it for you in the future.</p>
-		
+	<p><strong>A:</strong> Don't worry!. There are failsafes in place, which are meant to avoid FlashBack running in the background. If they fail, it means FlashBack was imporperly closed. To fix this, just use run FBBattFix in terminal to kill any instance of FlashBack!</p>
 	<hr><p><strong>Q:</strong> This is a work of art! How do I show my appreciation?</p>
 	<p><strong>A:</strong> Well, donating is always an option! It really helps me out, and is a great motivator!<sup>The link is at the bottom!</sup></p>
 	</div>
@@ -56,13 +58,19 @@
 	<fieldset>
 	<div>
 		<p><strong>LATEST</strong></p>
+		<p><strong>1.7</strong>: Added ability to update old backups, no longer require loggin in as root, inlcuded better battery preservation, added shortcut, suppress AutoBackups, added backward navigation, support for AutoWall wallpapers, preference images, changed backup DEB folder, file cleanup, moved to original repo, launch of FlashBack repo community submissions.</p><hr>
 		<p><strong>1.6</strong>: Removed recache rependency - anemone is no longer needed to properly restore. Added support for backups as low as version 1.4. Minor unnoteworthy improvements.</p><hr>
 		<p><strong>1.5.1</strong>: Fixed FlashBack not started becuse I left a few non-working lines of code in.</p>
+		<hr>
 		<p><strong>1.5</strong>: Thanks to the testing which was strongly upheld by NewD, Icon location and wallpaper restoring should in theory work. In addition, I've added a basic attempt at combatting possible overheating issues by killing the process if it runs in the background longer than 5 minutes.</p><hr>
 		<p><strong>1.4</strong>: Now you can actually see things! Added a fuller color scheme, hopefully to fix display issues on any terminal source.</p>
+		<hr>
 		<p><strong>1.3</strong>: Implemented wallpaper backup, icon layout backup, fixed color scheme on SSH via macOS, and added a version check for safety measures.</p>
+		<hr>
 		<p><strong>1.2</strong>: Added repo icon</p>
-		<p><strong>1.1</strong>: Big ol' rewrite. Thanks so much /u/LULShotz!</p>
+		<hr>
+		<p><strong>1.1</strong>: Big ol' rewrite. Thanks so much, /u/LULShotz!</p>
+		<hr>
 		<p><strong>1.0-beta3</strong>: Major fixes</p>
 		<p><strong>1.0-beta2</strong>: Minor fixes</p>
 		<p><strong>1.0-beta1</strong>: Inital Release</p>
